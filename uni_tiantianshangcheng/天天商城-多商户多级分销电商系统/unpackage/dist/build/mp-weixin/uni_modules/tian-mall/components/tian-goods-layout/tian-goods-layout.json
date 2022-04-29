@@ -1,6 +1,6 @@
 {
-  "component": true,
   "usingComponents": {
     "tian-goods-price": "/uni_modules/tian-mall/components/tian-goods-price/tian-goods-price"
-  }
+  },
+  "component": true
 }
