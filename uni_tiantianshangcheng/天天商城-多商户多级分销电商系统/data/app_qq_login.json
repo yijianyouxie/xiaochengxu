@@ -1,0 +1,9 @@
+{
+	"authResult": {
+		"access_token": "A20BE724756E8D2036BE2436865AB592",
+		"expires_in": 7776000,
+		"openid": "D6C7D7736F53931FA963F2BCA0F7692C",
+		"scope": "snsapi_userinfo"
+	},
+	"errMsg": "login:ok"
+}

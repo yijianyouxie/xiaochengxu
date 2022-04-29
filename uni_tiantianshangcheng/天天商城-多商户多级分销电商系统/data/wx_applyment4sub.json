@@ -1,0 +1,442 @@
+{
+	"state": 1,
+	"posid": 1,
+	"payment_id": "wxpay",
+	"title": "微信支付",
+	"created": 1620111666341,
+	"modified": 1620111666341,
+	"thumb": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-3fbab731-e993-47e6-882f-a74e444709a3/c70e9810-eca8-44da-ac38-72bc27ba9f7b.png",
+	"thumb_size": "750x561",
+	"attributes": {
+		"appId": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"title": "应用id"
+		},
+		"mchId": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"title": "商户号"
+		},
+		"sub_appid": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"title": "子应用id"
+		},
+		"sub_mch_id": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"title": "子商户号",
+			"applyButton": "申请子商户"
+		},
+		"key": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"title": "apiKey"
+		},
+		"pfx": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"title": "p12文件"
+		},
+		"profit_sharing": {
+			"bsonType": "string",
+			"defaultValue": "N",
+			"title": "是否分账",
+			"enum": [{
+					"value": "N",
+					"text": "关闭"
+				},
+				{
+					"value": "Y",
+					"text": "开启"
+				}
+			]
+		}
+	},
+	"applyment": {
+		"subject_type": {
+			"bsonType": "string",
+			"defaultValue": "SUBJECT_TYPE_ENTERPRISE",
+			"description": "主体类型需与营业执照/登记证书上一致",
+			"group": "subject_info",
+			"title": "主体类型",
+			"enum": [{
+					"text": "个体户",
+					"value": "SUBJECT_TYPE_INDIVIDUAL"
+				},
+				{
+					"text": "企业",
+					"value": "SUBJECT_TYPE_ENTERPRISE"
+				},
+				{
+					"text": "事业单位",
+					"value": "SUBJECT_TYPE_INSTITUTIONS"
+				},
+				{
+					"text": "其他组织",
+					"value": "SUBJECT_TYPE_OTHERS"
+				}
+			]
+		},
+		"license_copy": {
+			"bsonType": "string",
+			"defaultValue": "{shop.business_license}",
+			"upload": true,
+			"type": "businessLicense",
+			"group": "subject_info.business_license_info",
+			"title": "营业执照照片",
+			"component": {
+				"name": "cloud-image",
+				"props": {
+					"disabled": true,
+					"size": "600x400"
+				}
+			}
+		},
+		"license_number": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"group": "subject_info.business_license_info",
+			"title": "统一社会信用代码"
+		},
+		"merchant_name": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"group": "subject_info.business_license_info",
+			"title": "商户名称"
+		},
+		"legal_person": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"group": "subject_info.business_license_info",
+			"title": "法人姓名"
+		},
+		"id_doc_type": {
+			"bsonType": "string",
+			"defaultValue": "IDENTIFICATION_TYPE_IDCARD",
+			"group": "subject_info.identity_info",
+			"title": "证件类型",
+			"enum": [{
+				"text": "身份证",
+				"value": "IDENTIFICATION_TYPE_IDCARD"
+			}]
+		},
+		"id_card_copy": {
+			"bsonType": "string",
+			"defaultValue": "{shop.legal_person_license}",
+			"upload": true,
+			"type": "idcard",
+			"group": "subject_info.identity_info.id_card_info",
+			"title": "身份证人像面照片",
+			"component": {
+				"name": "cloud-image",
+				"props": {
+					"disabled": true,
+					"size": "600x400"
+				}
+			}
+		},
+		"id_card_name": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "请填写个体户经营者/法定代表人对应身份证的姓名，2~30个中文字符、英文字符、符号。",
+			"encrypt": true,
+			"group": "subject_info.identity_info.id_card_info",
+			"title": "身份证姓名"
+		},
+		"id_card_number": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "请填写个体户经营者/法定代表人对应身份证的号码。",
+			"encrypt": true,
+			"group": "subject_info.identity_info.id_card_info",
+			"title": "身份证号码"
+		},
+		"id_card_national": {
+			"bsonType": "string",
+			"defaultValue": "{shop.legal_person_license_back}",
+			"upload": true,
+			"type": "idcard",
+			"group": "subject_info.identity_info.id_card_info",
+			"title": "身份证国徽面照片",
+			"component": {
+				"name": "cloud-image",
+				"props": {
+					"disabled": true,
+					"size": "600x400"
+				}
+			}
+		},
+		"card_period_begin": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "示例值：2026-06-06",
+			"group": "subject_info.identity_info.id_card_info",
+			"title": "身份证有效期开始时间"
+		},
+		"card_period_end": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "示例值：2026-06-06",
+			"group": "subject_info.identity_info.id_card_info",
+			"title": "身份证有效期结束时间"
+		},
+		"merchant_shortname": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "请输入2-30个字符，支持中文/字母/数字/特殊符号",
+			"group": "business_info",
+			"title": "商户简称"
+		},
+		"service_phone": {
+			"bsonType": "string",
+			"defaultValue": "{shop.phone}",
+			"description": "请填写真实有效的客服电话，将在交易记录中向买家展示，提供咨询服务；",
+			"group": "business_info",
+			"title": "客服电话"
+		},
+		"sales_scenes_type": {
+			"bsonType": "array",
+			"defaultValue": [
+				"SALES_SCENES_MINI_PROGRAM"
+			],
+			"description": "请勾选实际售卖商品/提供服务场景（至少一项），以便为你开通需要的支付权限",
+			"group": "business_info.sales_info",
+			"title": "经营场景类型",
+			"enum": [{
+					"text": "小程序",
+					"value": "SALES_SCENES_MINI_PROGRAM"
+				},
+				{
+					"text": "APP",
+					"value": "SALES_SCENES_APP"
+				}
+			]
+		},
+		"mini_program_appid": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "服务商小程序APPID与商家小程序APPID，二选一",
+			"group": "business_info.sales_info.mini_program_info",
+			"title": "服务商小程序APPID"
+		},
+		"mini_program_sub_appid": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "服务商小程序APPID与商家小程序APPID，二选一",
+			"group": "business_info.sales_info.mini_program_info",
+			"title": "商家小程序APPID"
+		},
+		"app_appid": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "服务商应用APPID与商家应用APPID，二选一",
+			"group": "business_info.sales_info.app_info",
+			"title": "服务商应用APPID"
+		},
+		"app_sub_appid": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "服务商应用APPID与商家应用APPID，二选一",
+			"group": "business_info.sales_info.app_info",
+			"title": "商家应用APPID"
+		},
+		"contact_name": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "",
+			"encrypt": true,
+			"group": "contact_info",
+			"title": "超级管理员姓名"
+		},
+		"contact_id_number": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "超级管理员身份证件号码",
+			"encrypt": true,
+			"group": "contact_info",
+			"title": "超级管理员身份证"
+		},
+		"mobile_phone": {
+			"bsonType": "string",
+			"defaultValue": "{shop.phone}",
+			"description": "用于接收微信支付的重要管理信息及日常操作验证码",
+			"encrypt": true,
+			"group": "contact_info",
+			"title": "联系手机"
+		},
+		"contact_email": {
+			"bsonType": "string",
+			"defaultValue": "343169893@qq.com",
+			"description": "用于接收微信支付的开户邮件及日常业务通知。",
+			"encrypt": true,
+			"group": "contact_info",
+			"title": "联系邮箱"
+		},
+		"settlement_id": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "请选择结算规则ID",
+			"group": "settlement_info",
+			"title": "入驻结算规则ID",
+			"enum": [{
+					"text": "个体户餐饮、零售批发、网上综合商城",
+					"value": "719"
+				},
+				{
+					"text": "企业餐饮、零售批发、网上综合商城",
+					"value": "716"
+				}
+			]
+		},
+		"qualification_type": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "请填写所属行业名称",
+			"group": "settlement_info",
+			"title": "所属行业",
+			"enum": [{
+					"text": "餐饮",
+					"value": "餐饮"
+				},
+				{
+					"text": "食品生鲜",
+					"value": "食品生鲜"
+				},
+				{
+					"text": "零售批发/生活娱乐/其他--个体户",
+					"value": "零售批发/生活娱乐/其他"
+				},
+				{
+					"text": "零售批发/生活娱乐/网上商城/其他--企业",
+					"value": "零售批发/生活娱乐/网上商城/其他"
+				}
+			]
+		},
+		"bank_account_type": {
+			"bsonType": "string",
+			"defaultValue": "BANK_ACCOUNT_TYPE_CORPORATE",
+			"description": "请填写对公银行账户或经营者个人银行卡。",
+			"group": "bank_account_info",
+			"title": "账户类型",
+			"enum": [{
+					"text": "对公银行账户",
+					"value": "BANK_ACCOUNT_TYPE_CORPORATE"
+				},
+				{
+					"text": "经营者个人银行卡",
+					"value": "BANK_ACCOUNT_TYPE_PERSONAL"
+				}
+			]
+		},
+		"bank_account": {
+			"bsonType": "string",
+			"defaultValue": "{shop.bank_card}",
+			"description": "从左侧修改收款银行卡。",
+			"upload": false,
+			"type": "bankcard",
+			"group": "bank_account_info",
+			"title": "银行卡",
+			"component": {
+				"name": "cloud-image",
+				"props": {
+					"disabled": true,
+					"size": "600x400"
+				}
+			}
+		},
+		"account_name": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "1、选择“经营者个人银行卡”时，开户名称必须与“经营者证件姓名”一致。2、 选择“ 对公银行账户” 时， 开户名称必须与营业执照 / 登记证书的“ 商户名称” 一致。 ",
+			"encrypt": true,
+			"group": "bank_account_info",
+			"title": "开户名称"
+		},
+		"account_bank": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "开户银行，详细参见开户银行对照表。17家直连银行，请根据开户银行对照表直接填写银行名，非17家直连银行，该参数请填写为“其他银行”。示例值：工商银行",
+			"group": "bank_account_info",
+			"title": "开户银行",
+			"enum": [{
+				"text": "工商银行",
+				"value": "工商银行"
+			}, {
+				"text": "交通银行",
+				"value": "交通银行"
+			}, {
+				"text": "招商银行",
+				"value": "招商银行"
+			}, {
+				"text": "民生银行",
+				"value": "民生银行"
+			}, {
+				"text": "中信银行",
+				"value": "中信银行"
+			}, {
+				"text": "浦发银行",
+				"value": "浦发银行"
+			}, {
+				"text": "兴业银行",
+				"value": "兴业银行"
+			}, {
+				"text": "光大银行",
+				"value": "光大银行"
+			}, {
+				"text": "广发银行",
+				"value": "广发银行"
+			}, {
+				"text": "平安银行",
+				"value": "平安银行"
+			}, {
+				"text": "北京银行",
+				"value": "北京银行"
+			}, {
+				"text": "华夏银行",
+				"value": "华夏银行"
+			}, {
+				"text": "农业银行",
+				"value": "农业银行"
+			}, {
+				"text": "建设银行",
+				"value": "建设银行"
+			}, {
+				"text": "邮政储蓄银行",
+				"value": "邮政储蓄银行"
+			}, {
+				"text": "中国银行",
+				"value": "中国银行"
+			}, {
+				"text": "宁波银行",
+				"value": "宁波银行"
+			}, {
+				"text": "其他银行",
+				"value": "其他银行"
+			}]
+		},
+		"bank_address_code": {
+			"bsonType": "string",
+			"defaultValue": "",
+			"description": "示例值：110000，与系统城市编码一致",
+			"group": "bank_account_info",
+			"title": "开户银行省市编码"
+		},
+		"bank_name": {
+			"bsonType": "string",
+			"defaultValue": "{shop.bank_deposit}",
+			"description": "开户银行为“其他银行”时需填写银行全称，如‘深圳农村商业银行XXX支行’",
+			"group": "bank_account_info",
+			"title": "开户银行全称"
+		},
+		"account_number": {
+			"bsonType": "string",
+			"defaultValue": "{shop.bank_no}",
+			"description": "",
+			"encrypt": true,
+			"group": "bank_account_info",
+			"title": "银行账号"
+		}
+	}
+}

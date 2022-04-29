@@ -1,0 +1,11 @@
+{
+	"code": "073rgq000fnAvL1K3c200uFGcz0rgq0a",
+	"country": "",
+	"lang": "",
+	"scope": "snsapi_userinfo",
+	"state": "",
+	"target": {
+		"id": "weixin",
+		"description": "微信"
+	}
+}

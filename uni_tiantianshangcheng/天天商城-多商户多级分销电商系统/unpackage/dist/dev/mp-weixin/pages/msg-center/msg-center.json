@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "消息中心",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "unicloud-db": "/node-modules/@dcloudio/uni-cli-shared/components/unicloud-db",
+    "j-msg": "/components/j-msg/j-msg"
+  }
+}

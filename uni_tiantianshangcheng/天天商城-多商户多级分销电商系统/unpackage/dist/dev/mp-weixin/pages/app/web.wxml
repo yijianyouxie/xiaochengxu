@@ -1,0 +1,1 @@
+<view class="container"><block wx:if="{{src}}"><web-view src="{{src}}"></web-view></block></view>

@@ -1,0 +1,108 @@
+{
+	"id": "cqsort-tiantianmall",
+	"name": "tiantianmall",
+	"version": "2.1.8",
+	"description": "基于uniapp+unicloud+uniId+uniPay开发的多级分销电商系统，支持多商户，支持首页可视化编辑，支持广告变现，商户入驻",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+        "多商户电商",
+        "多级分销",
+        "微信支付宝支付",
+        "网赚激励视频uniad",
+        "页面拖拽"
+    ],
+	"author": "343169893@qq.com",
+	"license": "ISC",
+	"dependencies": {},
+	"uni_modules": {
+		"encrypt": [
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/index.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/controller/app.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/controller/payment.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/middleware/cache.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/middleware/config.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/service/order/mall.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/service/payment/alipay.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/service/payment/balance.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/service/payment/bank.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/service/payment/delivery.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/service/payment/unipay.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/service/payment/wxpay.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/service/sms/basic.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/service/system/app.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/service/weixin/basic.js",
+			"uniCloud-aliyun/cloudfunctions/tiantian-mall/service/weixin/message/basic.js"
+		],
+		"platforms": {
+			"cloud": {
+				"tcb": "y",
+				"aliyun": "y"
+			},
+			"client": {
+				"App": {
+					"app-vue": "y",
+					"app-nvue": "u"
+				},
+				"H5-mobile": {
+					"Safari": "y",
+					"Android Browser": "y",
+					"微信浏览器(Android)": "y",
+					"QQ浏览器(Android)": "y"
+				},
+				"H5-pc": {
+					"Chrome": "y",
+					"IE": "u",
+					"Edge": "y",
+					"Firefox": "y",
+					"Safari": "y"
+				},
+				"小程序": {
+					"微信": "y",
+					"阿里": "y",
+					"百度": "y",
+					"字节跳动": "y",
+					"QQ": "y"
+				},
+				"快应用": {
+					"华为": "y",
+					"联盟": "y"
+				},
+				"Vue": {
+					"vue2": "y",
+					"vue3": "u"
+				}
+			}
+		}
+	},
+	"displayName": "天天商城-多商户多级分销电商系统",
+	"repository": "",
+	"engines": {
+		"HBuilderX": "^3.2.15"
+	},
+	"dcloudext": {
+		"category": [
+			"uniCloud",
+			"云端一体项目模板"
+		],
+		"sale": {
+			"regular": {
+				"price": "699.00"
+			},
+			"sourcecode": {
+				"price": "1999.00"
+			}
+		},
+		"contact": {
+			"qq": "343169893"
+		},
+		"declaration": {
+			"ads": "无",
+			"data": "插件不采集任何数据",
+			"permissions": "无"
+		},
+		"npmurl": ""
+	}
+}
