@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "购物车",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "tian-empty": "/uni_modules/tian-mall/components/tian-empty/tian-empty",
+    "tian-icons": "/uni_modules/tian-mall/components/tian-icons/tian-icons",
+    "tian-goods-price": "/uni_modules/tian-mall/components/tian-goods-price/tian-goods-price"
+  }
+}

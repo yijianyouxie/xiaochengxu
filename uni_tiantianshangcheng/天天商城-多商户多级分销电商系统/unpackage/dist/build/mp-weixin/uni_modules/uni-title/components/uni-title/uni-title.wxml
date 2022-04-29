@@ -1,0 +1,1 @@
+<view class="uni-title__box data-v-a6a4ad9c" style="{{'align-items:'+(textAlign)+';'}}"><text class="{{['uni-title__base','data-v-a6a4ad9c','uni-'+type]}}" style="{{'color:'+(color)+';'}}">{{title}}</text></view>

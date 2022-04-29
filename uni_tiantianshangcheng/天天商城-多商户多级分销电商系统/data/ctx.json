@@ -1,0 +1,227 @@
+{
+	"state": {},
+	"event": {
+		"action": "user/login/sendSms"
+	},
+	"context": {
+		"mpserverless": {
+			"options": {
+				"endpoint": "https://api.bspapp.com",
+				"logger": {},
+				"secretId": null,
+				"secretKey": null,
+				"spaceId": "3fbab731-e993-47e6-882f-a74e444709a3"
+			},
+			"_debug": false,
+			"_logger": {},
+			"transport": {
+				"endpoint": "https://api.bspapp.com",
+				"protocol": "HTTP",
+				"logger": {},
+				"spaceId": "3fbab731-e993-47e6-882f-a74e444709a3",
+				"timeout": 5000,
+				"ua": "pkg_name:@alicloud/mpserverless-node-sdk;ver:1.2.0;"
+			},
+			"pkg": {
+				"name": "@alicloud/mpserverless-node-sdk",
+				"author": "junmo <qwe_lingkun@163.com>",
+				"version": "1.2.0",
+				"description": "Ant MPServerless JavaScript SDK for FaaS Egg Framework",
+				"main": "dist/index.js",
+				"types": "dist/index.d.ts",
+				"files": ["dist"],
+				"license": "MIT",
+				"engines": {
+					"node": ">=8.0.0"
+				},
+				"publishConfig": {
+					"access": "public"
+				},
+				"scripts": {
+					"tsc": "tsc -p tsconfig.json",
+					"tsc:w": "npm run tsc -- -w"
+				},
+				"dependencies": {
+					"@alicloud/mp-db-service": "3.0.0",
+					"@alicloud/mp-function-service": "3.0.0",
+					"@alicloud/mpserverless-node-file-service": "^1.2.0",
+					"@alicloud/mpserverless-node-user-service": "^1.2.0",
+					"@alicloud/mpserverless-core": "3.0.0",
+					"tslib": "^1.9.3",
+					"urllib": "^2.34.2"
+				}
+			},
+			"db": "_db",
+			"user": {
+				"transport": {
+					"endpoint": "https://api.bspapp.com",
+					"protocol": "HTTP",
+					"logger": {},
+					"spaceId": "3fbab731-e993-47e6-882f-a74e444709a3",
+					"timeout": 5000,
+					"ua": "pkg_name:@alicloud/mpserverless-node-sdk;ver:1.2.0;"
+				}
+			},
+			"file": {
+				"transport": {
+					"endpoint": "https://api.bspapp.com",
+					"protocol": "HTTP",
+					"logger": {},
+					"spaceId": "3fbab731-e993-47e6-882f-a74e444709a3",
+					"timeout": 5000,
+					"ua": "pkg_name:@alicloud/mpserverless-node-sdk;ver:1.2.0;"
+				}
+			},
+			"function": {
+				"transport": {
+					"endpoint": "https://api.bspapp.com",
+					"protocol": "HTTP",
+					"logger": {},
+					"spaceId": "3fbab731-e993-47e6-882f-a74e444709a3",
+					"timeout": 5000,
+					"ua": "pkg_name:@alicloud/mpserverless-node-sdk;ver:1.2.0;"
+				}
+			}
+		},
+		"logger": {},
+		"httpclient": {
+			"domain": null,
+			"_events": {},
+			"_eventsCount": 0,
+			"agent": {
+				"domain": null,
+				"_events": {},
+				"_eventsCount": 1,
+				"defaultPort": 80,
+				"protocol": "http:",
+				"options": {
+					"path": null
+				},
+				"requests": {},
+				"sockets": {},
+				"freeSockets": {},
+				"keepAliveMsecs": 1000,
+				"keepAlive": false,
+				"maxSockets": 1000,
+				"maxFreeSockets": 256
+			},
+			"hasCustomAgent": false,
+			"httpsAgent": {
+				"domain": null,
+				"_events": {},
+				"_eventsCount": 1,
+				"defaultPort": 443,
+				"protocol": "https:",
+				"options": {
+					"path": null
+				},
+				"requests": {},
+				"sockets": {},
+				"freeSockets": {},
+				"keepAliveMsecs": 1000,
+				"keepAlive": false,
+				"maxSockets": 1000,
+				"maxFreeSockets": 256,
+				"maxCachedSessions": 100,
+				"_sessionCache": {
+					"map": {},
+					"list": []
+				}
+			},
+			"hasCustomHttpsAgent": false
+		},
+		"args": {
+			"action": "user/login/sendSms"
+		},
+		"env": {},
+		"CLIENTIP": "127.0.0.1",
+		"CLIENTUA": "HBuilderX",
+		"SPACEINFO": {
+			"spaceId": "3fbab731-e993-47e6-882f-a74e444709a3",
+			"provider": "aliyun"
+		},
+		"configs": {
+			"pluginId": "tiantian-mall",
+			"defaultConfig": {},
+			"pluginConfigPath": "C:\\\\Users\\\\Administrator\\\\Documents\\\\HBuilderProjects\\\\tiantianmall\\\\uni_modules\\\\uni-config-center\\\\uniCloud\\\\cloudfunctions\\\\common\\\\uni-config-center\\\\tiantian-mall"
+		}
+	},
+	"config": {
+		"baseDir": "C:\\\\Users\\\\Administrator\\\\Documents\\\\HBuilderProjects\\\\tiantianmall\\\\uniCloud-aliyun\\\\cloudfunctions\\\\tiantian-mall",
+		"plugin": {},
+		"middleware": [
+			[null, {
+				"name": "auth",
+				"enable": true,
+				"ignore": "user"
+			}],
+			[null, {
+				"name": "permission",
+				"enable": true,
+				"ignore": ["app", "user", "self"]
+			}]
+		]
+	},
+	"service": {},
+	"controller": {
+		"user": {}
+	},
+	"query": {},
+	"data": {},
+	"status": 200,
+	"headers": {},
+	"db": {
+		"_db": "_db",
+		"Geo": {},
+		"command": {
+			"aggregate": {},
+			"project": {}
+		}
+	},
+	"httpclient": {
+		"domain": null,
+		"_events": {},
+		"_eventsCount": 0,
+		"agent": {
+			"domain": null,
+			"_events": {},
+			"_eventsCount": 1,
+			"defaultPort": 80,
+			"protocol": "http:",
+			"options": {
+				"path": null
+			},
+			"requests": {},
+			"sockets": {},
+			"freeSockets": {},
+			"keepAliveMsecs": 1000,
+			"keepAlive": false,
+			"maxSockets": 1000,
+			"maxFreeSockets": 256
+		},
+		"hasCustomAgent": false,
+		"httpsAgent": {
+			"domain": null,
+			"_events": {},
+			"_eventsCount": 1,
+			"defaultPort": 443,
+			"protocol": "https:",
+			"options": {
+				"path": null
+			},
+			"requests": {},
+			"sockets": {},
+			"freeSockets": {},
+			"keepAliveMsecs": 1000,
+			"keepAlive": false,
+			"maxSockets": 1000,
+			"maxFreeSockets": 256,
+			"maxCachedSessions": 100,
+			"_sessionCache": {
+				"map": {},
+				"list": []
+			}
+		},
+		"hasCustomHttpsAgent": false
+	}
+}

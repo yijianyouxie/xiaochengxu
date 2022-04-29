@@ -1,0 +1,1 @@
+.uqrcode-view{display:flex;box-sizing:border-box;flex-direction:column}.uqrcode-view-row{display:flex;box-sizing:border-box;flex-direction:row}.uqrcode-view-col{display:flex;box-sizing:border-box}
