@@ -109,7 +109,8 @@ namespace WeChatWASM
                 List<string> tempItems = new List<string>();
                 foreach (string k in key)
                 {
-                    long.TryParse(k.Split('-')[0], out long time);
+                    long time;
+                    long.TryParse(k.Split('-')[0], out time);
                     if (now - time > 8)
                     {
                         tempItems.Add(k);

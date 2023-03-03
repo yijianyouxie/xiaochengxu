@@ -679,7 +679,8 @@ namespace WeChatWASM
         public void WXPreDownloadAudiosCallback(string msg)
         {
             var res = JsonUtility.FromJson<WXBaseResponse>(msg);
-            int.TryParse(res.callbackId, out int id);
+            int id = 0;
+            int.TryParse(res.callbackId, out id);
             if (PreDownloadAudiosAction.ContainsKey(id)) {
                 var action = PreDownloadAudiosAction[id];
                 action.Invoke(res.errMsg == "0" ? 0 : 1);

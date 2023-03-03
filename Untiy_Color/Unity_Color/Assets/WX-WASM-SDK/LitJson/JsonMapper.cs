@@ -892,7 +892,7 @@ namespace LitJson
 
                 return;
             }
-#if UNITY_2018_3_OR_NEWER
+#if UNITY_2018_3_OR_NEWER_REMOVE
             if (obj is IDictionary dictionary)
             {
 #else
@@ -902,7 +902,7 @@ namespace LitJson
                 writer.WriteObjectStart();
                 foreach (DictionaryEntry entry in dictionary)
                 {
-#if UNITY_2018_3_OR_NEWER
+#if UNITY_2018_3_OR_NEWER_REMOVE
                     var propertyName = entry.Key is string key ?
                         key
                         : Convert.ToString(entry.Key, CultureInfo.InvariantCulture);
