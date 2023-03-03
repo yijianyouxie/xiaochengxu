@@ -28,7 +28,7 @@ MonoBehaviour:
     HideAfterCallMain: 1
     preloadFiles: 
     Orientation: 0
-    bgImageSrc: Assets/NGUI/Examples/Textures/brick.jpg
+    bgImageSrc: Assets/Plugs/NGUI/Examples/Textures/brick.jpg
     dataFileSubPrefix: 
     maxStorage: 200
     defaultReleaseSize: 31457280
