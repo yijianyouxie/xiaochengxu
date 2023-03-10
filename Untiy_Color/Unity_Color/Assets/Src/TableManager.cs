@@ -36,6 +36,13 @@ namespace yijianyouxie.Table
                     int.TryParse(jsonLevelData["LineNum"].ToString(), out levelData.lineNum);
                     int.TryParse(jsonLevelData["ColumnNum"].ToString(), out levelData.columnNum);
 
+                    float.TryParse(jsonLevelData["MinR"].ToString(), out levelData.minR);
+                    float.TryParse(jsonLevelData["MinG"].ToString(), out levelData.minG);
+                    float.TryParse(jsonLevelData["MinB"].ToString(), out levelData.minB);
+                    float.TryParse(jsonLevelData["MaxR"].ToString(), out levelData.maxR);
+                    float.TryParse(jsonLevelData["MaxG"].ToString(), out levelData.maxG);
+                    float.TryParse(jsonLevelData["MaxB"].ToString(), out levelData.maxB);
+
                     LevelDataList.levelDataList.Add(levelData);
                 }
 

@@ -5,6 +5,7 @@ using System.Collections;
 public class  DataEvent 
 {
     public static string TableLoaded = "TableLoaded";
+    public static string StartGameWithLevel = "StartGameWithLevel";
 
     public static string MyPetCreate = "C_MyPetCreate";
     public static string MyChildCreate = "C_MyChildCreate";

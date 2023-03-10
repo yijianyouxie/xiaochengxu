@@ -1,6 +1,48 @@
+//颜色部分实验了rgb模式，但是不好控制。
+//2023.03.10颜色部分改为hsl模式。h的取值范围是0-360；s和l的取值都是0-100；
 [
-{"Level":1,"LineNum":5,"ColumnNum":5},
-{"Level":2,"LineNum":5,"ColumnNum":5},
-{"Level":3,"LineNum":5,"ColumnNum":5},
-{"Level":4,"LineNum":5,"ColumnNum":5}
+  {
+    "Level": 1,
+    "LineNum": 6,
+    "ColumnNum": 5,
+    "MinR": 20,
+    "MinG": 80,
+    "MinB": 50,
+    "MaxR": 360,
+    "MaxG": 100,
+    "MaxB": 100
+  },
+  {
+    "Level": 2,
+    "LineNum": 6,
+    "ColumnNum": 5,
+    "MinR": 0,
+    "MinG": 0,
+    "MinB": 0,
+    "MaxR": 255,
+    "MaxG": 255,
+    "MaxB": 255
+  },
+  {
+    "Level": 3,
+    "LineNum": 6,
+    "ColumnNum": 5,
+    "MinR": 0,
+    "MinG": 0,
+    "MinB": 0,
+    "MaxR": 255,
+    "MaxG": 255,
+    "MaxB": 255
+  },
+  {
+    "Level": 4,
+    "LineNum": 6,
+    "ColumnNum": 5,
+    "MinR": 0,
+    "MinG": 0,
+    "MinB": 0,
+    "MaxR": 255,
+    "MaxG": 255,
+    "MaxB": 255
+  }
 ]
